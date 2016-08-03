@@ -1,0 +1,97 @@
+{
+  nodeQuery(nid: 1238) {
+    title
+    ... on EntityNodeInstance {
+      progression: careerOptionsAndProgres {
+        plain: value
+        html: processed
+      }
+      entryreqs: entryRequirements {
+        plain: value
+        html: processed
+      }
+      equipment: equipmentNeededAndCosts {
+        plain: value
+        html: processed
+      }
+      teaching: teachingMethods {
+        plain: value
+        html: processed
+      }
+      placement: workPlacementFieldTrips {
+        plain: value
+        html: processed
+      }
+      modules {
+        targetId
+        module: entity {
+          title
+          ... on EntityNodeModule {
+            description: moduleDescription {
+              plain: value
+              html: processed
+            }
+            assessmentCoursework
+            assessmentExam
+            assessmentPractical
+            hoursIndependent
+            hoursPlacement
+            hoursScheduled
+            mandatory
+            moduleCode
+            moduleYear
+          }
+        }
+      }
+      occurrences {
+        targetId
+        entity {
+          title
+          ... on EntityNodeOccurrence {
+            addentryreqs: additionalEntryReqs {
+              plain: value
+              html: processed
+            }
+            attendanceMode
+            attendancePattern
+            duration
+            durationUnits
+            endDate
+            fees
+            locationCode
+            startDate
+            tutorId
+            unitInstanceCode
+            unitOccurrenceCode
+            unitOccurrenceId
+          }
+        }
+      }
+      qualifications {
+        targetId
+        qualification: entity {
+          title
+          ... on EntityNodeQualification {
+            overview: courseOverview {
+              plain: value
+              html: processed
+            }
+            accreditingInstitution
+            qualificationCode
+            qualificationLevel
+            regulatingBody
+          }
+        }
+      }
+      nid
+      marketArea
+      clearing
+      revalidationYear
+      school
+      ssaCode
+      ucasCode
+      unitInstanceCode
+      unitInstanceId
+    }
+  }
+}
