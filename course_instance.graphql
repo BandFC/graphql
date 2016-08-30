@@ -1,5 +1,5 @@
 {
-  nodeQuery(nid: 1238) {
+  nodeQuery(nid: 23873) {
     title
     ... on EntityNodeInstance {
       progression: careerOptionsAndProgres {
@@ -24,7 +24,7 @@
       }
       modules {
         targetId
-        module: entity {
+        entity {
           title
           ... on EntityNodeModule {
             description: moduleDescription {
@@ -37,9 +37,9 @@
             hoursIndependent
             hoursPlacement
             hoursScheduled
-            mandatory
             moduleCode
-            moduleYear
+            moduleCredits
+            moduleId
           }
         }
       }
@@ -54,13 +54,16 @@
             }
             attendanceMode
             attendancePattern
-            duration
+            canApply
+            canEnrol
             durationUnits
             endDate
             fees
-            locationCode
+            location
             startDate
+            tutorCode
             tutorId
+            tutorName
             unitInstanceCode
             unitOccurrenceCode
             unitOccurrenceId
@@ -77,18 +80,21 @@
               html: processed
             }
             accreditingInstitution
+            awardingBody
             qualificationCode
             qualificationLevel
-            regulatingBody
+            fundingYear
           }
         }
       }
       nid
       marketArea
+      marketAreaDescription
       clearing
       revalidationYear
-      school
+      schoolOwning
       ssaCode
+      ssaDescription
       ucasCode
       unitInstanceCode
       unitInstanceId
